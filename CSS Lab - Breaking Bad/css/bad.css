@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'HeartBreakingBad';
+    src: url('../font/HeartBreakingBad.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'HeartBreakingBad', sans-serif;
+    font-size: 80px;
+}
