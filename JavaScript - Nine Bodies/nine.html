@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body
+    class="bg-gradient-to-b from-[#ffff7a] to-green-800 via-[#ee8544] m-5 p-5"
+  >
+    <header class="text-[72px] text-white mx-auto text-center">
+      10 Passports but 9 Bodies
+    </header>
+    <header class="text-[36px] text-white mx-auto text-center mb-5">
+      The 10 People on the Plane are:
+    </header>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mx-auto">
+      <div class="relative text-center p-3">
+        <img
+          src="images/pilot.webp"
+          alt="Pilot"
+          class="w-[300px] h-[300px] cursor-pointer mx-auto"
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+        <p class="text-white text-lg mt-2">
+          Pilot - Captain Primero Gabriel Vega
+        </p>
+      </div>
+      <div class="relative text-center p-3">
+        <img
+          src="images/flightAttendent.webp"
+          alt="Flight Attendant"
+          class="w-[300px] h-[300px] cursor-pointer mx-auto"
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+        <p class="text-white text-lg mt-2">Flight Attendant</p>
+      </div>
+      <div class="relative text-center p-3">
+        <img
+          src="images/insurance.webp"
+          alt="Insurance Salesman"
+          class="w-[300px] h-[300px] cursor-pointer mx-auto"
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+        <p class="text-white text-lg mt-2">Zack - Insurance Salesman</p>
+      </div>
+      <div class="relative text-center p-3">
+        <img
+          src="images/wrestler.webp"
+          alt="Wrestler"
+          class="w-[300px] h-[300px] cursor-pointer mx-auto"
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+        <p class="text-white text-lg mt-2">
+          Carlos - Mexican Wrestler 'Rapido'
+        </p>
+      </div>
+      <div class="relative text-center p-3">
+        <img
+          src="images/hunter.webp"
+          alt="Hunter"
+          class="w-[300px] h-[300px] cursor-pointer mx-auto"
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+        <p class="text-white text-lg mt-2">Travis - MAGA Husband</p>
+      </div>
+      <div class="relative text-center p-3">
+        <img
+          src="images/hotelManager.webp"
+          alt="Hotel Manager"
+          class="w-[300px] h-[300px] cursor-pointer mx-auto"
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+        <p class="text-white text-lg mt-2">Lisa - MAGA Wife</p>
+      </div>
+      <div class="relative text-center p-3">
+        <img
+          src="images/techBillionaireDaughter.webp"
+          alt="Tech Billionaire's Daughter"
+          class="w-[300px] h-[300px] cursor-pointer mx-auto"
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+        <p class="text-white text-lg mt-2">Amy - Tech Billionaire’s Daughter</p>
+      </div>
+      <div class="relative text-center p-3">
+        <img
+          src="images/limoDriver.webp"
+          alt="Limo Driver"
+          class="w-[300px] h-[300px] cursor-pointer mx-auto"
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+        <p class="text-white text-lg mt-2">Dan - Limo Driver</p>
+      </div>
+      <div class="relative text-center p-3">
+        <img
+          src="images/doctor.webp"
+          alt="Doctor"
+          class="w-[300px] h-[300px] cursor-pointer mx-auto"
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+        <p class="text-white text-lg mt-2">Kevin - Doctor</p>
+      </div>
+      <div class="relative text-center p-3">
+        <img
+          src="images/photographer.webp"
+          alt="Photographer"
+          class="w-[300px] h-[300px] cursor-pointer mx-auto"
+        />
+        <span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+        <p class="text-white text-lg mt-2">Sonja - Photographer</p>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    // Function to show the X on the image when clicked
+    document.querySelectorAll("img").forEach((img) => {
+      img.addEventListener("click", function () {
+        const closeX = this.nextElementSibling; // The <span> with the "X"
+        closeX.classList.remove("hidden"); // Show the X by removing 'hidden' class
+      });
+    });
+    // Function to remove a specific X when clicked
+    function removeX(span) {
+      span.classList.add("hidden"); // Hide the X by adding 'hidden' class
+    }
+    // Function to reset (remove) all X's
+    function resetAllX() {
+      document.querySelectorAll("span").forEach((span) => {
+        if (span.classList.contains("text-red-500")) {
+          // Ensure we're only resetting X spans
+          span.classList.add("hidden"); // Hide all the X's by adding 'hidden' class
+        }
+      });
+    }
+  </script>
+
+  <button
+    class="mt-5 px-6 py-2 bg-red-500 text-white text-xl font-semibold hover:bg-red-700 transition-all mx-auto block"
+    onclick="resetAllX()"
+  >
+    Reset
+  </button>
+</html>
